@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale Report</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            background-color: #f9f6f6;
+        }
+        .container{
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .box{
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fbfcfd8e;
+            margin: 0 auto;
+            margin-top: 50px;
+            box-shadow: 10px 10px 1cap rgba(3, 2, 2, 0.3);
+            border-radius: 10px;
+        }
+       
+        .formcontainer{
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 30px;
+        }
+        .controler{
+            display: flex;
+            flex-direction: column;
+        }
+        label{
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        input,select,textarea{
+            padding: 6px 10px;
+            border: 1px solid #6133d7;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        input:focus{
+            outline-color: crimson;
+        }
+        .button{
+            display: flex;
+            justify-content: end;
+            margin-top: 40px;
+            
+        }
+        button{
+            background-color: #0cb149;
+            border-radius: 5px;
+            border:transparent solid 2px;
+            color: #fbf9f9;
+            transition: 0.3s ease-in;
+            
+        }
+        button:hover{
+            background-color: #f00909;
+            transition: 0.3s ease-out;
+            cursor: pointer;
+        }
+        .addcontroler{
+            grid-column: 1/span 2;
+        }
+        .addcontroler textarea{
+            width: 100%;
+        }
+        @media(max-width: 470px){
+            .addcontroler{
+                grid-column: 1/span 1;
+            }
+        };
+        
+            </style>
+    <style>
+      nav a img{
+        height: 60px;
+        border-radius: 20px;
+      }
+      table {
+          border-collapse: collapse;
+          width: 80%;
+          margin: 20px;
+      }
+
+      th, td {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+      }
+
+      th {
+          background-color: #f2f2f2;
+      }
+
+      .search-bar {
+          margin: 20px;
+      }
+
+      .search-input {
+          padding: 8px;
+          margin-right: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+      }
+
+      .search-btn {
+          padding: 8px 12px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+<!--navbar start--> 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="Admin.html"><img src="img/logo.png" alt="GYMGENIX Logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="Admin.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="A_ragistration.html">Rgistration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="A_payment.html">Payment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="A_plan.html">Plan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="A_report.html">Report</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="A_members.html">Viwe Members</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+<!--navbar stop--> 
+
+<div class="container">
+    <div class="box">
+        <h1>GYMGENIXS<H2>Sale Report:</H3></h1>
+    <img src="" alt="">
+    <form action="">
+        <div class="formcontainer">
+
+            <div class="controler">
+                <label for="date"><h5>From Date:</h5></label>
+            <input type="date" id="date" name="date" ></div>
+            <div class="controler">
+                <label for="date"><h5>To Date:</h5></label>
+            <input type="date" id="date" name="date" ></div>
+        <div class="controler">
+        <label for="email"><h5>Total:</h5></label>
+    <input type="email" id="email" name="first name" 
+    placeholder="Enter Subscription...."></div>
+    
+        <div class="button">
+            <button type="submit">Search</button>
+        </div>
+        <div class="button">
+            <button type="submit">Cancel</button>
+        </div>
+
+    </form>
+</div>
+</div>
+<br><br>
+<div class="search-bar">
+  <input type="text" class="search-input" placeholder="Search...">
+  <button class="search-btn">Search</button>
+</div>
+
+<table>
+  <tr>
+      <th>Member Number</th>
+      <th>Member name</th>
+      <th>Amount</th>
+      <th>Month</th>
+      <th>Year</th>
+      <th>Paid Date</th>
+      
+  </tr>
+  <tr>
+      <td>001</td>
+      <td>Aadesh</td>
+      <td>6000</td>
+      <td>june</td>
+      <td>2023</td>
+      <td>28-07-2023</td>
+  </tr>
+  <!-- Add more rows as needed -->
+</table>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

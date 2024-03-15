@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gymgenixs Login</title>
+    <link rel="shortcut icon" href="./images/log i.png" type="image/png">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+           background-image: url(images/loginbg.jpg);
+           background-size: cover;
+        }
+        .wrapper{
+            position: relative;
+            width: 400px;
+            height: 440px;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .5);
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 30px rgba(13, 3, 3, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .wrapper .form-box{
+            width: 100%;
+            padding: 40px;
+
+        }
+        .form-box h2{
+            font-size: 2em;
+            color: #162938;
+            text-align: center;
+        }
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid black;
+            margin: 30px 0;
+        }
+        .input-box label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-weight: 2em;
+            color: black;
+            pointer-events: none;
+            transition: .3s;
+
+        }
+        .input-box input:focus~label,
+        .input-box input:valid~label{
+            top: -5px
+        }
+
+        .input-box input{
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: black;
+            font-weight: 600;
+            padding: 0 35px 0 5px;
+
+        }
+        .input-box .icon{
+            position: absolute;
+            right: 8px;
+            font-size: 1.3em;
+            color: black;
+            line-height: 57px;
+        }
+        .remember-forgot{
+            font-size: .9em;
+            color: black;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .remember-forgot label input{
+            accent-color: black;
+            margin-right: 4px;
+
+        }
+        .remember-forgot a{
+            color: #0d0d0e;
+            text-decoration: none;
+        }
+        .remember-forgot a:hover{
+            text-decoration: underline;
+        }
+        .btn{
+            width: 100%;
+            height: 45px;
+            background: black;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #fff;
+            font-weight: 500;
+        }
+        .login-register{
+            font-size: .9em;
+            color: black;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+        }
+        .login-register p a{
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .login-register p a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-unread"></ion-icon>
+                    </span>
+                    <input type="email" required autofocus>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button type="button" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account?<a href="ragistration.html" class="ragister-link"> Ragister Here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html>

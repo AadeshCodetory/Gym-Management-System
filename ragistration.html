@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYMGENIXS Rgistration</title>
+    <link rel="shortcut icon" href="./images/login fav.png" type="image/png">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   
+    background-image: url(images/img1.avif);
+    backdrop-filter: blur(5px);
+    min-height: 100%;
+    position: relative;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    
+}
+.box{
+    max-width: 600px;
+    padding: 20px;
+    background-color: #e0dce599;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 10px 10px 1cap rgba(3, 2, 2, 0.3);
+    border-radius: 10px;
+}
+.formcontainer{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 30px;
+}
+.controler{
+    display: flex;
+    flex-direction: column;
+   
+}
+label{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+input,select,textarea{
+    padding: 6px 10px;
+    border: 2px solid #050505;
+    border-radius: 10px;
+    font-size: 15px;
+   
+}
+input:focus{
+    outline-color: crimson;
+}
+.btn{
+            width: 100%;
+            height: 45px;
+            background: rgb(42, 41, 41);
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #fff;
+            font-weight: 500;
+        }
+        .btn:hover{
+   cursor: pointer;
+    transition: 0.2s ease-in;
+    background-color: #087a1d;
+}
+.addcontroler{
+    grid-column: 1/span 2;
+}
+.have-acc p{
+    font-size: .9em;
+            color: black;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+}
+.have-acc p a{
+    color: black;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .have-acc p a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>GYMGENIXS<H3>Ragistration</H3></h1>
+        <img src="" alt="">
+        <form action="">
+            <div class="formcontainer">
+
+                <div class="controler">
+                    <label for="first name">First Name:</label>
+                <input id="first name" autofocus name="first name"
+                 placeholder="Enter first name..."></div>
+                <div class="controler">
+                <label for="last name">Last Name:</label>
+            <input id="last name" name="first name"
+             placeholder="Enter last name..."></div>
+            <div class="controler">
+            <label for="email">Email Id:</label>
+        <input type="email" id="email" name="first name" 
+        placeholder="Enter Email id...."></div>
+        <div class="controler">
+            <label for="role">Role of member:</label>
+        <select id="role" name="role">
+            <option value="">select role of member</option>
+            <option value="Platinum">Platinum</option>
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+        </select></div>
+        <div class="controler">
+            <label for="city">Password:</label>
+        <input type="password" id="city" name="city" 
+        placeholder="Enter your city...."></div>
+        
+        <div class="controler">
+            <label for="city">City:</label>
+        <input type="city" id="city" name="city" 
+        placeholder="Enter your city...."></div>
+        <div class="controler">
+            <label for="pincode">Pin Code:</label>
+        <input type="number" id="pincode" name="pincode" 
+        placeholder="Enter Your Pin Code...."></div>
+        <div class="controler">
+            <label for="date">Date:</label>
+        <input type="date" id="date" name="date" ></div>
+        
+                <button type="submit" class="btn"> Apply Now</button>
+           
+            <div class="have-acc">
+                <p>Already have an account? <a href="login.html">Login Here!</a></p>
+            </div>
+        </form>
+    </div>
+    </div>
+    
+</body>
+</html>

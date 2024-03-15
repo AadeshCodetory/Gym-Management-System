@@ -1,0 +1,158 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   font-family: 'montserrat';
+    color: #fff;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+   
+.nav{
+    height: 65px;
+    width: 100%;
+    position: relative;
+    background-color: #062828ce;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 50px;
+    gap: 45px;
+    position: fixed;
+    z-index: 99;
+}
+
+.nav img{
+    height: 60px;
+    border-radius: 20px;
+    
+}
+.nav img:hover{
+    animation: glow 0.3s infinite;
+    font-size:20px;
+}
+@keyframes glow{
+    0%,100%{
+        box-shadow: 0 0 40px rgb(126, 5, 248);
+    }
+    50%{
+        box-shadow: 0 0 40px rgb(15, 193, 50);
+    }
+}
+.nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 20px;
+}
+
+.nav h4:hover{
+    border-bottom: 4px solid rgb(232, 231, 234);
+    border-radius: 2px;
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
+h4 button{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(84, 67, 28);
+    border-radius: 10px;
+    color: #1c0bda;
+    font-size: 20px;
+    border: none;
+   
+}
+h4  a{
+    text-decoration: none;
+}
+button:hover{
+   cursor: pointer;
+    transition: 0.2s ease-in;
+   background-color: #491818;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   
+
+}
+#main{
+    position: relative;
+
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    
+    background-color: #d32f2f;
+}
+.img1{
+   /* background-image: url(images/img1.avif);*/
+    min-height: 100%;
+    position: relative;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img2{
+    background-image: url(images/img2.jpg);
+    min-height: 900px;
+    background-position:bottom;
+}
+.img3{
+    background-image: url(images/img3.jpg);
+    min-height: 600px;
+}
+.img4{
+    background-image: url(images/img4.jpg);
+    min-height: 600px;
+   
+} 
+.img1 ,.img2,.img3, .img4{
+    position: relative;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.ptext{
+    position: absolute;
+    top: 50%;
+   width: 100%;
+   text-align: center;
+    color: black;
+    font-size:30px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+
+}
+.textbg{
+    
+    color: #efedf1;
+    padding: 20px;
+    border-radius: 20px;
+}
+.section1{
+    text-align: center;
+    padding: 50px 90px;
+}
+.light{
+    background-color: #464f4e;
+    color: #f0e9e9;
+}
+.dark{
+    background-color: #383636;
+    color: #d8d4d4;
+}
+
+
+
+
+
+
+    
