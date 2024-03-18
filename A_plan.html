@@ -1,92 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GYMGENIXS Plan</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
-body{
-    background-color: #f9f6f6;
-}
-.container{
-    max-width: 800px;
-    margin: 0 auto;
-}
-.box{
-    max-width: 600px;
-    padding: 20px;
-    background-color: #fbfcfd8e;
-    margin: 0 auto;
-    margin-top: 50px;
-    box-shadow: 10px 10px 1cap rgba(3, 2, 2, 0.3);
-    border-radius: 10px;
-}
-nav a img{
-    height: 60px;
-    border-radius: 10px;
-      }
-.formcontainer{
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 30px;
-}
-.controler{
-    display: flex;
-    flex-direction: column;
-}
-label{
-    font-size: 15px;
-    margin-bottom: 10px;
-}
-input,select,textarea{
-    padding: 6px 10px;
-    border: 1px solid #6133d7;
-    border-radius: 10px;
-    font-size: 15px;
-}
-input:focus{
-    outline-color: crimson;
-}
-.button{
-    display: flex;
-    justify-content: end;
-    margin-top: 40px;
-    
-}
-button{
-    background-color: #0cb149;
-    border-radius: 5px;
-    border:transparent solid 2px;
-    color: #fbf9f9;
-    transition: 0.3s ease-in;
-    
-}
-button:hover{
-    background-color: #f00909;
-    transition: 0.3s ease-out;
-    cursor: pointer;
-}
-.addcontroler{
-    grid-column: 1/span 2;
-}
-.addcontroler textarea{
-    width: 100%;
-}
-@media(max-width: 470px){
-    .addcontroler{
-        grid-column: 1/span 1;
-    }
-};
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
 
+        }
+
+        body {
+            background-color: #f9f6f6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .box {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fbfcfd8e;
+            margin: 0 auto;
+            margin-top: 50px;
+            box-shadow: 10px 10px 1cap rgba(3, 2, 2, 0.3);
+            border-radius: 10px;
+        }
+
+        nav a img {
+            height: 60px;
+            border-radius: 10px;
+        }
+
+        .formcontainer {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .controler {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 6px 10px;
+            border: 1px solid #6133d7;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        input:focus {
+            outline-color: crimson;
+        }
+
+        .button {
+            display: flex;
+            justify-content: end;
+            margin-top: 40px;
+
+        }
+
+        button {
+            background-color: #0cb149;
+            border-radius: 5px;
+            border: transparent solid 2px;
+            color: #fbf9f9;
+            transition: 0.3s ease-in;
+
+        }
+
+        button:hover {
+            background-color: #f00909;
+            transition: 0.3s ease-out;
+            cursor: pointer;
+        }
+
+        .addcontroler {
+            grid-column: 1/span 2;
+        }
+
+        .addcontroler textarea {
+            width: 100%;
+        }
+
+        @media(max-width: 470px) {
+            .addcontroler {
+                grid-column: 1/span 1;
+            }
+        }
+
+        ;
     </style>
     <!--Plans css-->
     <style>
@@ -95,18 +115,19 @@ button:hover{
             width: 60%;
             margin: 20px;
         }
-    
-        th, td {
+
+        th,
+        td {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
-    
+
         th {
             background-color: #f2f2f2;
             cursor: pointer;
         }
-    
+
         .edit-btn {
             background-color: #4CAF50;
             color: white;
@@ -115,160 +136,172 @@ button:hover{
             border-radius: 4px;
             cursor: pointer;
         }
-        h3{
+
+        h3 {
             text-decoration: underline;
         }
     </style>
-    
+    <script type="text/javascript" src="./jquery/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="./jquery/plan.js"></script>
 </head>
+
 <body>
-    <!--navbar start--> 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="Admin.html"><img src="img/logo.png" alt="GYMGENIX Logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        
-        <li class="nav-item">
-          <a class="nav-link" href="Admin.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="A_ragistration.html">Rgistration</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="A_payment.html">Payment</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="A_plan.html">Plan</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="A_report.html">Report</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="A_members.html">Viwe Members</a>
-        </li>
-        
-      </ul>
-    </div>
-  </nav>
-  <!--navbar stop--> 
+    <!--navbar start-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="Admin.html"><img src="img/logo.png" alt="GYMGENIX Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="Admin.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="A_ragistration.html">Rgistration</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="A_payment.html">Payment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="A_plan.html">Plan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="A_report.html">Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="A_members.html">Viwe Members</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!--navbar stop-->
     <div class="container">
         <div class="box">
-            <h1>GYMGENIXS<H2>Add Plan</H3></h1>
-        <img src="" alt="">
-        <form action="">
-            <div class="formcontainer">
+            <h1>GYMGENIXS<H2>Add Plan</H3>
+            </h1>
+            <img src="" alt="">
+            <form action="">
+                <div class="formcontainer">
 
-                <div class="controler">
-                    <label for="first name"> Plan Name:</label>
-                <input id="first name" name="first name"
-                 placeholder="Enter Plan Name ..."></div>
-                <div class="controler">
-                <label for="last name">Validity:</label>
-            <input id="last name" name="first name"
-             placeholder="Enter Validity..."></div>
-            <div class="controler">
-            <label for="email">Subscription:</label>
-        <input type="email" id="email" name="first name" 
-        placeholder="Enter Subscription...."></div>
-        
-            <div class="button">
-                <button type="submit">Save</button>
-            </div>
-            <div class="button">
-                <button type="submit">Cancel</button>
-            </div>
+                    <div class="controler">
+                        <label for="plan-name"> Plan Name:</label>
+                        <input id="plan-name" name="plan-name" placeholder="Enter Plan Name ...">
+                    </div>
+                    <div class="controler">
+                        <label for="validity">Validity:</label>
+                        <input type="number" id="validity" name="validity" placeholder="Enter Validity...">
+                    </div>
+                    <div class="controler">
+                        <label for="amount">Amount:</label>
+                        <input type="number" id="amount" name="amount" placeholder="enter amount in INR">
+                    </div>
 
-        </form>
+                    <div class="button">
+                        <button type="button" id="save">Save</button>
+                    </div>
+                    <div class="button">
+                        <button type="reset">Cancel</button>
+                    </div>
+
+            </form>
+        </div>
     </div>
+    <br><br>
+    <div class="plan">
+
+        <h3>Plan Detail:</h2>
+
+            <table id="planTable">
+                <tr>
+                    <th onclick="sortTable(0)">Plan</th>
+                    <th onclick="sortTable(1)">Validity</th>
+                    <th onclick="sortTable(2)">Amount</th>
+                    <th>Edit</th>
+                </tr>
+            </table>
     </div>
-<br><br>
-<div class="plan">
+    <script>
+        // Sample data
+        var plans = [
+            { plan: 'Silver', validity: '30 days', amount: '$10' },
+            { plan: 'Gold', validity: '60 days', amount: '$20' },
+            { plan: 'Platinum', validity: '90 days', amount: '$30' }
+        ];
 
-<h3>Plan Detail:</h2>
+        // Function to populate the table with data
+        function populateTable() {
+            var table = document.getElementById('planTable');
 
-<table id="planTable">
-<tr>
-    <th onclick="sortTable(0)">Plan</th>
-    <th onclick="sortTable(1)">Validity</th>
-    <th onclick="sortTable(2)">Amount</th>
-    <th>Edit</th>
-</tr>
-</table>
-</div>
-<script>
-// Sample data
-var plans = [
-    { plan: 'Silver', validity: '30 days', amount: '$10' },
-    { plan: 'Gold', validity: '60 days', amount: '$20' },
-    { plan: 'Platinum', validity: '90 days', amount: '$30' }
-];
+            plans.forEach(function (plan) {
+                var row = table.insertRow();
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
 
-// Function to populate the table with data
-function populateTable() {
-    var table = document.getElementById('planTable');
+                cell1.textContent = plan.plan;
+                cell2.textContent = plan.validity;
+                cell3.textContent = plan.amount;
 
-    plans.forEach(function (plan) {
-        var row = table.insertRow();
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
+                var editBtn = document.createElement('button');
+                editBtn.textContent = 'Edit';
+                editBtn.className = 'edit-btn';
+                editBtn.addEventListener('click', function () {
+                    // Add your edit logic here
+                    console.log('Edit button clicked for ' + plan.plan);
+                });
 
-        cell1.textContent = plan.plan;
-        cell2.textContent = plan.validity;
-        cell3.textContent = plan.amount;
+                cell4.appendChild(editBtn);
+            });
+        }
 
-        var editBtn = document.createElement('button');
-        editBtn.textContent = 'Edit';
-        editBtn.className = 'edit-btn';
-        editBtn.addEventListener('click', function () {
-            // Add your edit logic here
-            console.log('Edit button clicked for ' + plan.plan);
-        });
+        // Call the function to populate the table
+        populateTable();
 
-        cell4.appendChild(editBtn);
-    });
-}
+        // Function to sort the table
+        function sortTable(columnIndex) {
+            var table, rows, switching, i, x, y, shouldSwitch;
+            table = document.getElementById("planTable");
+            switching = true;
 
-// Call the function to populate the table
-populateTable();
+            while (switching) {
+                switching = false;
+                rows = table.rows;
 
-// Function to sort the table
-function sortTable(columnIndex) {
-    var table, rows, switching, i, x, y, shouldSwitch;
-    table = document.getElementById("planTable");
-    switching = true;
+                for (i = 1; i < rows.length - 1; i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("td")[columnIndex];
+                    y = rows[i + 1].getElementsByTagName("td")[columnIndex];
 
-    while (switching) {
-        switching = false;
-        rows = table.rows;
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
 
-        for (i = 1; i < rows.length - 1; i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementsByTagName("td")[columnIndex];
-            y = rows[i + 1].getElementsByTagName("td")[columnIndex];
-
-            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                shouldSwitch = true;
-                break;
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
             }
         }
+    </script>
 
-        if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-        }
-    }
-}
-</script>
 
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
 
 </body>
+
 </html>
